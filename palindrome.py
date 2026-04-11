@@ -1,10 +1,13 @@
-def palindrome(str):
-    rev=""
-    for i in range (len(str)-1,-1,-1):
-        rev=rev+str[i]
-    if rev==str:
-        print(f"{str} is a palindrome")
-    else:
-        print(f"{str} is not a palindrome")
-palindrome("NAMAN")
-palindrome("CURSOR")        
+n = int(input("Enter number: "))
+temp = n
+rev = 0
+
+while n > 0:
+    digit = n % 10
+    rev = rev * 10 + digit
+    n //= 10
+
+if temp == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
